@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Briefing: Ready for Monday</title>
+    <!-- Load Tailwind CSS via CDN for modern, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family for a professional look -->
+    <style>
+        :root {
+            --primary-blue: #1c7ed6; /* Slightly brighter blue */
+            --light-bg: #f8f9fa;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light-bg);
+        }
+        .custom-border-blue {
+            border-color: var(--primary-blue);
+        }
+        .bg-primary-blue {
+            background-color: var(--primary-blue);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 antialiased">
+
+    <!-- Main Content Container: Centered, max width, shadow for web app feel -->
+    <div class="max-w-3xl mx-auto my-8 bg-white rounded-xl shadow-2xl overflow-hidden">
+
+        <!-- Header Section -->
+        <header class="bg-primary-blue text-white p-8 rounded-t-xl" style="background-color: #1c7ed6;">
+            <h1 class="text-3xl font-extrabold mb-1 tracking-tight">
+                🌐 The Global Briefing 🚀
+            </h1>
+            <p class="text-sm font-light opacity-80">
+                Your Essential World News Update | Monday, November 25, 2025
+            </p>
+        </header>
+
+        <!-- MAIN STORY SECTION -->
+        <section class="p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b-4 custom-border-blue" style="border-color: #1c7ed6;">
+                Top Story: Peace Talks & Regional Tension
+            </h2>
+
+            <!-- Story 1: US/Ukraine Peace Framework -->
+            <div class="mb-6 pb-4 border-b border-gray-200">
+                <h3 class="text-xl font-semibold mb-2 text-primary-blue" style="color: #1c7ed6;">
+                    US and Ukraine Agree to Change Draft of Peace Plan
+                </h3>
+                <p class="text-base text-gray-600 leading-relaxed">
+                    Negotiators in Geneva are revising a previous proposal that bipartisan lawmakers criticized for potentially destabilizing global security by rewarding Russia after its 2022 invasion. Officials from the US, EU, and Ukraine are meeting to finalize the updated framework, focusing on stronger territorial integrity guarantees for Kyiv.
+                </p>
+            </div>
+
+            <!-- Story 2: Middle East Escalation -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-2 text-red-600">
+                    Israel Kills Top Hezbollah Commander in Attack on Lebanon’s Capital
+                </h3>
+                <p class="text-base text-gray-600 leading-relaxed">
+                    Hezbollah has confirmed the death of 'great commander' Haytham Ali Tabatabai following an Israeli strike on Beirut, stating that the attack "opens the door to escalation of assaults." This incident marks a significant test of the fragile ceasefire in the wider region, with international bodies calling for immediate de-escalation.
+                </p>
+            </div>
+
+            <!-- Focus Button (Now interactive) -->
+            <div class="text-center">
+                <button id="toggleButton" onclick="toggleNews()" 
+                        class="inline-block px-6 py-3 bg-primary-blue text-white font-bold text-lg rounded-lg hover:bg-blue-700 transition duration-300 shadow-md cursor-pointer" 
+                        style="background-color: #1c7ed6;">
+                    Continue Reading Below
+                </button>
+            </div>
+        </section>
+        
+        <!-- START Additional Content Wrapper (Initially Hidden) -->
+        <div id="additionalContent" class="hidden">
+            <!-- FINANCIAL DEEP DIVE SECTION (Stocks and Inflation - STATIC CONTENT) -->
+            <section class="p-6 md:p-8 bg-gray-100 border-t border-b border-gray-300">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-gray-400">
+                    💰 Wall Street Deep Dive: Stocks, Indices & Inflation
+                </h2>
+
+                <!-- Market Indices Table (Static Data) -->
+                <h3 class="text-xl font-semibold mb-3 text-gray-700">Major Index Movements (Friday Close)</h3>
+                <div class="overflow-x-auto mb-6">
+                    <table class="min-w-full bg-white rounded-lg shadow-inner">
+                        <thead class="bg-gray-200">
+                            <tr>
+                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-600 uppercase tracking-wider rounded-tl-lg">Index</th>
+                                <th class="px-4 py-2 text-right text-xs font-medium text-gray-600 uppercase tracking-wider">Close Value</th>
+                                <th class="px-4 py-2 text-right text-xs font-medium text-gray-600 uppercase tracking-wider rounded-tr-lg">Change (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-blue-50">
+                                <td class="px-4 py-2 whitespace-nowrap font-medium text-primary-blue">
+                                    S&P 500
+                                </td>
+                                <td class="px-4 py-2 whitespace-nowrap text-right">4,591.32</td>
+                                <td class="px-4 py-2 whitespace-nowrap text-right text-green-600 font-bold">+0.2%</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50">
+                                <td class="px-4 py-2 whitespace-nowrap font-medium text-primary-blue">
+                                    Nasdaq Composite
+                                </td>
+                                <td class="px-4 py-2 whitespace-nowrap text-right">14,210.88</td>
+                                <td class="px-4 py-2 whitespace-nowrap text-right text-red-600 font-bold">-0.8%</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50">
+                                <td class="px-4 py-2 whitespace-nowrap font-medium text-primary-blue">
+                                    Dow Jones Industrial Average
+                                </td>
+                                <td class="px-4 py-2 whitespace-nowrap text-right">35,122.95</td>
+                                <td class="px-4 py-2 whitespace-nowrap text-right text-green-600 font-bold">+0.5%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Inflation and Economic Data (STATIC CONTENT REVERTED) -->
+                <h3 class="text-xl font-semibold mb-3 text-gray-700">Inflation & Fed Watch (Latest Data)</h3>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <div class="flex-1 p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <p class="text-sm font-semibold text-gray-800 mb-1">Latest CPI Reading (Year-over-Year)</p>
+                        <!-- Editable CPI Data -->
+                        <p class="text-2xl font-extrabold text-red-600">3.7%</p>
+                        <!-- Editable CPI Note -->
+                        <p class="text-xs text-gray-500 mt-1">Inflation remains sticky, primarily driven by housing and services.</p>
+                    </div>
+                    <div class="flex-1 p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <p class="text-sm font-semibold text-gray-800 mb-1">Consumer Sentiment Index</p>
+                        <!-- Editable Sentiment Data -->
+                        <p class="text-2xl font-extrabold text-amber-600">62.8</p>
+                        <!-- Editable Sentiment Note -->
+                        <p class="text-xs text-gray-500 mt-1">Sentiment dropped slightly due to persistent high interest rates.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXISTING FINANCIAL MARKETS SECTION -->
+            <section class="p-6 md:p-8 bg-gray-50 border-t border-gray-200">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">
+                    📈 Market Commentary: AI Concerns & Fed Hopes
+                </h2>
+                <ul class="list-disc list-inside space-y-3 pl-4">
+                    <li class="text-base text-gray-600">
+                        <strong class="text-gray-800">AI Stock Volatility:</strong> Shares of major AI and semiconductor companies, including Nvidia, experienced sharp swings and declines, putting the S&P 500 and Nasdaq under pressure amid lingering investor skepticism about the sustainability of the AI growth trade.
+                    </li>
+                    <li class="text-base text-gray-600">
+                        <strong class="text-gray-800">Fed Rate Cut Hopes:</strong> Markets rebounded slightly late last week on signals from a top Federal Reserve official suggesting there is "room for a further adjustment" to interest rates in the near term, increasing investor betting on a December rate cut.
+                    </li>
+                    <li class="text-base text-gray-600">
+                        <strong class="text-gray-800">Bitcoin Tumble:</strong> Bitcoin continued its two-week slide, hitting its lowest levels since April as investors reassess risk appetite amid broader market volatility.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- US POLITICS SECTION -->
+            <section class="p-6 md:p-8 border-t border-gray-200">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 custom-border-blue" style="border-color: #1c7ed6;">
+                    🇺🇸 US Political Landscape: Budget & Court Decisions
+                </h2>
+                <div class="space-y-4">
+                    <div class="p-4 border border-gray-200 rounded-lg shadow-sm bg-white hover:shadow-md transition">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                            Budget Gridlock Looms
+                        </h3>
+                        <p class="text-sm text-gray-600">
+                            The deadline for funding the federal government is rapidly approaching, with bipartisan negotiations stalled over key spending priorities. Failure to reach a compromise could lead to a partial government shutdown impacting non-essential services by the end of the week.
+                        </p>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg shadow-sm bg-white hover:shadow-md transition">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                            Supreme Court to Hear Environmental Case
+                        </h3>
+                        <p class="text-sm text-gray-600">
+                            The Supreme Court has scheduled oral arguments for a pivotal case concerning the limits of EPA authority in regulating industrial emissions. The decision, expected next spring, could significantly redefine federal regulatory power over climate policy.
+                        </p>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg shadow-sm bg-white hover:shadow-md transition">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                            New Cabinet Post Announced
+                        </h3>
+                        <p class="text-sm text-gray-600">
+                            The Presidential Administration announced the creation of a new cabinet-level position dedicated to enhancing supply chain resilience and combating future geopolitical disruptions to global trade infrastructure.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WORLD BRIEFS SECTION -->
+            <section class="p-6 md:p-8 border-t border-gray-200">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">
+                    World Briefs
+                </h2>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <span class="text-primary-blue text-lg mr-2" style="color: #1c7ed6;">&bull;</span>
+                        <p class="text-base text-gray-600"><strong class="text-gray-800">Bolsonaro Arrested:</strong> Former Brazil President Jair Bolsonaro was arrested after claiming "hallucinations" led him to try and prize open his electronic ankle tag with a soldering iron.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-primary-blue text-lg mr-2" style="color: #1c7ed6;">&bull;</span>
+                        <p class="text-base text-gray-600"><strong class="text-gray-800">Nigerian Abductions:</strong> Fifty of the more than 300 schoolchildren abducted from a Catholic school in Nigeria have escaped captivity, though the majority remain missing.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-primary-blue text-lg mr-2" style="color: #1c7ed6;">&bull;</span>
+                        <p class="text-base text-gray-600"><strong class="text-gray-800">COP30 Deal Agreed:</strong> The UN climate talks in Brazil concluded with a compromise deal, but campaigners expressed mixed reactions as the final text omitted an explicit mention of phasing out fossil fuels.</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <!-- END Additional Content Wrapper -->
+
+        <!-- Footer Section -->
+        <footer class="bg-gray-800 text-gray-400 text-xs p-6 rounded-b-xl text-center">
+            <p class="mb-2">
+                This is your essential morning briefing from our editorial desk.
+            </p>
+            <p class="text-sm font-semibold text-white mb-2">Published by Ali</p>
+            <p class="space-x-3">
+                <span class="text-white">To manage your subscription, please visit your account dashboard.</span>
+            </p>
+            <p class="mt-4 text-gray-500 text-xs">
+                Copyright &copy; 2025 The Global Briefing. All rights reserved.
+            </p>
+        </footer>
+    </div>
+    <!-- End Main Content Container -->
+
+    <script>
+        /**
+         * Toggles the visibility of the additional news content and updates the button text.
+         */
+        function toggleNews() {
+            const content = document.getElementById('additionalContent');
+            const button = document.getElementById('toggleButton');
+            
+            // Toggle the 'hidden' Tailwind class to show/hide the content
+            content.classList.toggle('hidden');
+
+            // Update button text based on the new visibility state
+            if (content.classList.contains('hidden')) {
+                button.textContent = 'Continue Reading Below';
+            } else {
+                button.textContent = 'Hide Additional Briefing';
+            }
+        }
+    </script>
+</body>
+</html>
